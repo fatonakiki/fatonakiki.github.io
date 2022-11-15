@@ -1,8 +1,102 @@
+<!doctype html>
 <html>
   <head>
-    <title> Faton Akiki </title>
+    <meta charset="utf-8">
+    <title>Personal Website</title>
+    <!-- Meta data -->
+    <meta name="description" content="Faton Akiki - Personal Website">
+    <meta name="author" content="Faton Akiki">
+    <!-- Support for responsivity -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="programmer-icon.png">
+  
+    <!-- Support for google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+   
+    <!-- My custom styles -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>    
+
+    <!-- JS script to handle the page changing and menu hovers -->
+    <script type="text/javascript" src="script.js"></script>
   </head>
-  <p> Hello World ! </p>
-  <p> This is a paragraph </p>
-  <h3> This is a heading </h3>
+  
+  <body>
+    <header id="header">
+      <img src="code-64.png">
+      <h1>Faton Akiki</h1>
+      
+      <!-- Menu  -->
+      <ul class="main-menu">
+        <li><a href="#home">home</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>                 
+    </header>
+   
+    <div id="container">
+      <div class="inner">
+        <div id="content"> 
+          
+          <div id="home" class="content-region hide">
+            <h2>Welcome !</h2>
+            <p>
+              I am Faton Akiki. A student at Rochester Institute of Technology majoring in Computing and Information Technology.
+            </p>
+          </div>
+          
+          <div id="projects" class="content-region hide">
+            <h2>Projects</h2>
+            <div class="projcontainer">
+              <img src="projectimg1.png" alt="Project 1" style="width:100%;">
+              <div class="projcontent">
+                <h1>Project 1</h1>
+                <p>Project about a local apartments hotel</p>
+              </div>
+            </div>
+            <div class="projcontainer">
+              <img src="projectimg2.png" alt="Project 2" style="width:100%;">
+              <div class="projcontent">
+                <h1>Project 2</h1>
+                <p>Project about a renovating services company</p>
+              </div>
+            </div>
+          </div>
+          
+          <div id="about" class="content-region hide">
+            <h2>About</h2>
+            <p>
+              Thanks for your interest, here is a quick story of me and this website.
+              My Name is  Faton Akiki; I am a second year student at RIT Kosovo with a concentration in Computing and Information Technology. I love to solve programming problems in most efficient ways. Apart from university I like to work on personal projects.
+              I do my work mainly in C# and .NET Frameworks, but also in Python and JAVA. Web Programming is my stronger section. Besides these I preffer Data Science, Software Engineering and databases as well.
+              This website is basically a portfolio about my work, which is built using HTML, CSS, Javascript only. 
+              Cheers,
+              Your colleague 
+            </p>
+          </div>
+          
+          <div id="contact" class="content-region hide">
+            <h2>Contact</h2>
+            <form>      
+              <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+              <input name="email" type="text" class="feedback-input" placeholder="Email" />
+              <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+              <input type="submit" value="SUBMIT"/>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+<!-- footer -->
+    <footer>  
+      <a href="">LinkedIn</a>
+      <a href="">GitHub</a>
+      <a href="">Facebook</a>
+    </footer>
+  </body>
 </html>
