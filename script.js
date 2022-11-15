@@ -1,29 +1,25 @@
-// Wait for the document to load before running the script 
 (function ($) {
   
-  // We use some Javascript and the URL #fragment to hide/show different parts of the page
-  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#Linking_to_an_element_on_the_same_page
+  // We use some Javascript and the URL #fragment to hide or show different parts of the page
   $(window).on('load hashchange', function(){
     
-    // First hide all content regions, then show the content-region specified in the URL hash 
-    // (or if no hash URL is found, default to first menu item)
+    // First we hide all the content of pages, then show the content-region specified in the URL hash 
+
     $('.content-region').hide();
     
-    // Remove any active classes on the main-menu
+    // This removes any active classes on the navigation-menu
     $('.main-menu a').removeClass('active');
+
+    // if no hash URL is found, we show the content of the homepage
     var region = location.hash.toString() || $('.main-menu a:first').attr('href');
     
-    // Now show the region specified in the URL hash
+    // This shows the region specified in the URL hash
     $(region).show();
     
-    // Highlight the menu link associated with this region by adding the .active CSS class
+    // Highlights the menu link by adding the .active CSS class
     $('.main-menu a[href="'+ region +'"]').addClass('active'); 
-
-    // Alternate method: Use AJAX to load the contents of an external file into a div based on URL fragment
-    // This will extract the region name from URL hash, and then load [region].html into the main #content div
-    // var region = location.hash.toString() || '#first';
-    // $('#content').load(region.slice(1) + '.html')
     
   });
   
 })(jQuery);
+
